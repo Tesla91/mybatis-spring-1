@@ -15,6 +15,8 @@ public interface RefugeeMapper {
     String GET_ASYLUM_COUNTRY = "SELECT * FROM `immigrants`.refugees_all where asylum_country = #{asylum_country}";
     String GET_ORIGIN_COUNTRY = "SELECT * FROM `immigrants`.refugees_all where origin_country = #{origin_country}";
     String GET_YEAR = "SELECT * FROM `immigrants`.refugees_all where yr = #{yr}";
+    String GET_ALL_REFUGEES = "SELECT SUM(refugees) as all_refugees, asylum_country FROM `immigrants`." +
+            "refugees_all where asylum_country = #{asylum_country}";
 
 
     @Select(GET_ASYLUM_COUNTRY)
@@ -26,5 +28,7 @@ public interface RefugeeMapper {
     @Select(GET_YEAR)
     public ArrayList<Refugee> getYr(int yr);
 
+    @Select(GET_ALL_REFUGEES)
+    public Refugee getAll_refugees(String asylum_country);
 
 }

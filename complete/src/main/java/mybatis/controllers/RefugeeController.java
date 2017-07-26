@@ -3,11 +3,9 @@ package mybatis.controllers;
 import mybatis.model.Refugee;
 import mybatis.model.User;
 import mybatis.services.RefugeeService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -32,6 +30,12 @@ public class RefugeeController {
     @RequestMapping(value = "/yr/{yr}", method = RequestMethod.GET)
     public ArrayList<Refugee> getYr(@PathVariable int yr) {
         return refugeeService.getYr(yr);
+    }
+
+    @RequestMapping(value = "/custom", method = RequestMethod.GET)
+    public Refugee getAllRefugees(@Param (value = "asylum_country")String asylum_country) {
+        return refugeeService.getAllRefugees(asylum_country);
+
     }
 
 }

@@ -7,14 +7,11 @@ public class Refugee {
     String asylum_country;
     String origin_country;
     int yr;
+    double refugees;
+    double total_population;
+    double all_refugees;
 
     public Refugee() {
-    }
-
-    public Refugee(String asylum_country, String origin_country, int yr) {
-        this.asylum_country = asylum_country;
-        this.origin_country = origin_country;
-        this.yr = yr;
     }
 
     public String getAsylum_country() {
@@ -39,5 +36,29 @@ public class Refugee {
 
     public void setYr(int yr) {
         this.yr = yr;
+    }
+
+    public double getRefugees() {
+        return refugees;
+    }
+
+    public void setRefugees(double refugees) {
+        this.refugees = refugees;
+    }
+
+    public double getTotal_population() {
+        return total_population;
+    }
+
+    public void setTotal_population(double total_population) {
+        this.total_population = total_population;
+    }
+
+    public double getAll_refugees() {
+        return all_refugees;
+    }
+
+    public void setAll_refugees(double all_refugees) {
+        this.all_refugees = all_refugees;
     }
 }
