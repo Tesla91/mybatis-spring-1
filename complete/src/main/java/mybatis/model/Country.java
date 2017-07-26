@@ -4,12 +4,12 @@ package mybatis.model;
  * Created by nicola on 7/25/17.
  */
 public class Country {
-    String isoCode;  //: "US",
-    String name;  //: "UNITED STATES",
-    String displayName;  //: "United States",
-    String isoThree;  //: "USA",
-    String numberCode;  //: 840,
-    String createDate;  //:
+    String isoCode;
+    String name;
+    String displayName;
+    String isoThree;
+    String numberCode;
+    String createDate;
 
     public String getIsoCode() {
         return isoCode;

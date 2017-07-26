@@ -4,31 +4,31 @@ package mybatis.model;
  * Created by nicola on 7/25/17.
  */
 public class Locations {
-    String id;  //: "EB3XVT",
-    String name;  //: "Main Brewery",
-    String streetAddress;  //: "1 Kendall Square",
-    String extendedAddress;  //: "Bldg 100",
-    String locality;  //: "Cambridge",
-    String region;  //: "Massachusetts",
-    String postalCode;  //: "02139",
-    String phone;  //: "(617) 494-1994",
-    String website;  //: http://www.cambrew.com/,
-    String hoursOfOperation;  //: "Mon: 11:30 am - 11:00 pm
-    String latitude;  //: 42.366468,
-    String longitude;  //: -71.0914549,
-    String isPrimary;  //: "Y",
-    String inPlanning;  //: "N",
-    String isClosed;  //: "N",
-    String openToPublic;  //: "Y",
-    String locationType;  //: "brewpub",
-    String locationTypeDisplay;  //: "Brewpub",
-    String countryIsoCode;  //: "US",
-    String yearOpened;  //: "1989",
-    String status;  //: "verified",
-    String statusDisplay;  //: "Verified",
-    String createDate;  //: "2012-01-03 02:41:50",
-    String updateDate;  //: "2014-07-23 19:11:34",
-    Country country;  //: {...}
+    String id;
+    String name;
+    String streetAddress;
+    String extendedAddress;
+    String locality;
+    String region;
+    String postalCode;
+    String phone;
+    String website;
+    String hoursOfOperation;
+    String latitude;
+    String longitude;
+    String isPrimary;
+    String inPlanning;
+    String isClosed;
+    String openToPublic;
+    String locationType;
+    String locationTypeDisplay;
+    String countryIsoCode;
+    String yearOpened;
+    String status;
+    String statusDisplay;
+    String createDate;
+    String updateDate;
+    Country country;
 
     public String getId() {
         return id;

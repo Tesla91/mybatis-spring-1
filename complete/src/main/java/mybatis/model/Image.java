@@ -5,11 +5,11 @@ package mybatis.model;
  */
 public class Image {
 
-    String icon;  //: https://s3.amazonaws.com/brewerydbapi/brewery/nvfMg1/upload_mcniin-icon.png,
-    String medium;  //: https://s3.amazonaws.com/brewerydbapi/brewery/nvfMg1/upload_mcniin-medium.png,
-    String large;  //: https://s3.amazonaws.com/brewerydbapi/brewery/nvfMg1/upload_mcniin-large.png,
-    String squareMedium;  //: https://s3.amazonaws.com/brewerydbapi/brewery/nvfMg1/upload_mcniin-squareMedium.png,
-    String squareLarge;  //: https://s3.amazonaws.com/brewerydbapi/brewery/nvfMg1/upload_mcniin-squareLarge.png
+    String icon;
+    String medium;
+    String large;
+    String squareMedium;
+    String squareLarge;
 
     public String getIcon() {
         return icon;
