@@ -1,8 +1,11 @@
 package mybatis.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * Created by nicola on 7/25/17.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Data {
     String id;
     String Name;
