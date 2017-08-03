@@ -164,6 +164,7 @@ public class DarkSkyService {
                 dailyForecast.setWindSpeed(weatherForecast.getDaily().getData()[i].getWindSpeed());
                 responses.add(dailyForecast);
             }
+
             darkSkyMapper.insertWeatherDailyForecast(responses.get(7));
             return responses;
         } else{
