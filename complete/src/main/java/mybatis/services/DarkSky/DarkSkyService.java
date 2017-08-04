@@ -13,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 
 /**
@@ -146,6 +147,7 @@ public class DarkSkyService {
             DailyForecast dailyForecast;
             int i = 0;
             for (i = 0; i < weatherForecast.getDaily().getData().length; i++) {
+                System.out.println(i);
 
                 dailyForecast = new DailyForecast();
                 String sunsetTime = DateUtil.changeDateFromLongWithMin(weatherForecast.getDaily().getData()[i].getSunsetTime());
@@ -165,12 +167,15 @@ public class DarkSkyService {
                 responses.add(dailyForecast);
             }
 
+
             darkSkyMapper.insertWeatherDailyForecast(responses.get(7));
+
             return responses;
         } else{
             //grab most recent 8 days from DB and return it to browser using weekForecast object
             responses = darkSkyMapper.getDailyForecast();
-            System.out.println("DB");
+            Collections.reverse(responses);
+            //System.out.println("DB");
             return responses;
         }
     }
@@ -178,14 +183,14 @@ public class DarkSkyService {
     private boolean populateDB() {
         Date date = new Date();
         date = DateUtil.addSevenDays(date);
-        System.out.println(darkSkyMapper.getMostRecentDate());
+        //System.out.println(darkSkyMapper.getMostRecentDate());
 
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
         String formatedDate = sdf.format(date);
-        System.out.println(formatedDate);
+        //System.out.println(formatedDate);
         //ask DB for most recent forecast date
         int val = darkSkyMapper.getMostRecentDate().compareTo(formatedDate);
-        System.out.println(val);
+        //System.out.println(val);
         if( val == 0) {
             return false;
         }else return true;

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by nicola on 7/26/17.
@@ -50,9 +51,10 @@ public class DarkSkyController {
         return darkSkyService.getWeatherHourlyAverage(latitude, longitude);
     }
 
-    @RequestMapping(value = "/forecast", method = RequestMethod.GET)
+    @RequestMapping(value = "/forecastOrig", method = RequestMethod.GET)
     public ArrayList<DailyForecast> getWeatherWeekForecast(@RequestParam(value = "lat")double latitude,
                                                            @RequestParam(value = "long")double longitude) {
+
         return darkSkyService.getWeatherDailyForecast(latitude, longitude);
     }
 
